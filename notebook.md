@@ -1,3 +1,11 @@
+## 2021-07-24
+#### Git, 删除远程的分支：
+  >- `git push origin --delete freature/xxx`  
+
+
+
+
+
 ## 2021-07-18
 #### Git, 合并分支的两个方法merge和rebase：
   >- **merge:如果将一个外部分支合并到当前分支，外部分支中的commit将基于时间顺序插入到当前分支的commit中。  
