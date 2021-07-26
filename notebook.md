@@ -1,3 +1,7 @@
+## 2021-07-26
+#### kalman filter, 原理：
+  >- **当前状态的估计 = 上一状态的估计 + 当前测量 的加权和。**
+
 ## 2021-07-24
 #### Git, 删除远程的分支：
   >- `git push origin --delete freature/xxx`  
