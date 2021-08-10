@@ -1,3 +1,22 @@
+## 2021-8-9
+#### **CMAKE常见语法含义**  
+  >1. include(xxx): 载入并执行一个cmake文件或者模块，当指定模块的时候，该命令会在CMAKE_MODULE_PATH目录下寻找对应名字的.cmake文件。  
+  >2. file(xx xx xxx): 文件相关操作，包括文件读写，文件删除等，当标志位是GLOB时，表示删选符合要求的文件列表存储到变量中。  
+  >3. find_package(xxx): 寻找外部依赖库，先进行Module模式的搜索，主要搜索指定路径下的FindModuleName.cmake文件，如果找不到对应的文件，则进入Config模式，在指定路径下搜索ModuleName-config.cmake文件。一般来说三方库如果使用cmake编译的则会自动生成xxx-config.cmake文件，如果不是cmake编译的则需要自己编写Findxxx.cmake文件。  
+  >4. add_definitions(xxx xxx): 在代码编译的时候加入一些宏定义。可以在不修改源码的情况下进行一些测试。  
+  >5. set_target_properties(xxx): 了解到的两个作用，一是给对应的库文件对应的版本号等信息，二是将库文件输出为指定的文件名和目录。  
+  >6. include_directories(xxx): 添加头文件目录到cmake编译时搜索路径中。  
+  >7. add_library(xxx): 利用指定的源文件生成对应的链接文件。  
+  >8. target_include_directories(xxx) && target_link_libraries(xxx) && target_compile_options(xxx): 分别表示给对应的目标指定需要包含的头文件，这个命令和include_directories的区别是作用域的不同，include_directories作用于整个目录包括其子目录，target_include_directories只作用于当前目标; target_link_libraries则指定目标需要链接的库；target_compile_options设置目标的编译选项。  
+  >9. enable_testing(xxx): 打开编译test的开关。  
+  >10. add_subdirectories(xxx): 添加一个子目录，并构建这个子目录，目录中需要包含CMakeLists.txt文件。  
+  >11. link_directories(xxx): 添加需要链接的库的路径，这个命令需要在target生成之前运行。  
+  >12. add_library(xxx): 根据给定的源文件生成对应的target文件,包括静态库STATIC，动态库SHARED，MODULE三种类型。  
+  >13. configure_file(xxx): 复制文件到指定位置。  
+  >14. add_custom_target(xx): 设置一个自定义的cmake命令，可以在命令行中执行，例如cmake uninstall。  
+
+
+
 ## 2021-8-4
 #### **C++类模板的编写**
   >- **C++在编译期间会将每个.cpp文件编译成对应的实现，然后在链接阶段去链接这些实现，这就需要.cpp中的实现必须是已知类型的，而类模板的定义是未知类型的，所以如果放到.cpp中则编译出来了无法进行链接。**
