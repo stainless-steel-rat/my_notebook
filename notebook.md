@@ -1,3 +1,9 @@
+## 2021-8-19
+#### **C++中Atomic的作用:**  
+  >- **atomic在头文件`include<atomic>`中，是一个模板类，这是一个原子操作类，用这个类可以实现无锁同步，不需要使用mutex和lock_gaurd等方法**  
+  >- **定义一个原子变量`std::atomic<int> xxx`,store()和load()分别定义了原子写和原子读操作，原子类都没有拷贝操作，所以需要使用compare_exhance_weak()和compare_exhange_strong()等方法赋值。**
+
+
 ## 2021-8-9
 #### **CMAKE常见语法含义**  
   >1. include(xxx): 载入并执行一个cmake文件或者模块，当指定模块的时候，该命令会在CMAKE_MODULE_PATH目录下寻找对应名字的.cmake文件。  
