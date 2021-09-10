@@ -1,3 +1,12 @@
+## 2021-9-10
+#### **Shell命令**
+  >- **查找库中的函数接口:`find -name "*.so" | xargs -i echo "echo {} && nm {}" | sh | grep -E "\.so | cexp"`**  
+  >- **查看动态库或可执行文件的soname或者引用被引用情况: `readelf -d xxx.so`**
+
+
+
+
+
 ## 2021-9-2
 #### **Linux系统修改shm的大小**  
   >- **mount -o size=4096M -o remount /dev/shm**
