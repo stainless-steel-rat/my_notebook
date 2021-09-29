@@ -1,3 +1,9 @@
+## 2021-9-29
+#### **rebase 提交代码**
+  >- **`git rebase origin dg-master`把当前分支切入点调整到master分支的最新点**
+  >- **`git commit --amend`修改最近的commit**
+
+
 ## 2021-9-24
 #### **基于pytorch的伪量化训练**
   >- **QAT量化感知训练实现原理分两个部分，在做forward的时候：每个module例如conv的输入需要基于收集的range做量化和反量化（值压缩到量化范围的float型数值）然后对conv的权重也要做量化和反量化这样一个伪量化操作，计算所得的结果output也需要基于收集的range做量化和反量化。第二部分backward：由于进行伪量化的时候用到了round这样的截断操作，所以梯度是无法回传的，所以需要在反传的时候屏蔽掉伪量化这部分操作，这个方法也叫做Straight Through Estimator(STE)。**  
