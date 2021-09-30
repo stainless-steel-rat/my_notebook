@@ -1,3 +1,9 @@
+## 2021-9-30
+#### **python类的多层继承和super调用**
+  >- **在python中使用多层次的继承，例如Class A; Class B(A); Class C(B);时，在调用init初始化函数的时候，如果有super，则依次执行父类，父父类的对应init函数。**  
+
+
+
 ## 2021-9-29
 #### **rebase 提交代码**
   >- **`git rebase origin dg-master`把当前分支切入点调整到master分支的最新点**
